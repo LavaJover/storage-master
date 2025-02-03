@@ -2,4 +2,37 @@ syntax = "proto3";
 
 package storage;
 
-option go_package = "";
+option go_package = "github.com/LavaJover/storage-master/storage-service/proto/gen;storagepb";
+
+service StorageService{
+    rpc CreateStorage (CreateStorageRequest) returns (CreateStorageResponse);
+    rpc AddCell (AddCellRequest) returns (AddCellResponse);
+    rpc AddBox (AddBoxRequest) returns (AddBoxResponse);
+}
+
+message CreateStorageRequest{
+    string name = 1;
+}
+
+message CreateStorageResponse{
+    uint64 id = 1;
+    string name = 2;
+}
+
+message AddCellRequest{
+    string name = 1;
+}
+
+message AddCellResponse{
+    uint64 id = 1;
+    string name = 2;
+}
+
+message AddBoxRequest{
+    string name = 1;
+}
+
+message AddBoxResponse{
+    uint64 id = 1;
+    string name = 2;
+}
