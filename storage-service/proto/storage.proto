@@ -27,6 +27,7 @@ message AddCellRequest{
 message AddCellResponse{
     uint64 id = 1;
     string name = 2;
+    uint64 storage_id = 3;
 }
 
 message AddBoxRequest{
@@ -37,4 +38,5 @@ message AddBoxRequest{
 message AddBoxResponse{
     uint64 id = 1;
     string name = 2;
+    uint64 cell_id = 3;
 }
