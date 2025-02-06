@@ -1,8 +1,8 @@
 package service
 
 import (
-	"github.com/LavaJover/storage-master/internal/models"
-	"github.com/LavaJover/storage-master/internal/repo"
+	"github.com/LavaJover/storage-master/storage-service/internal/models"
+	"github.com/LavaJover/storage-master/storage-service/internal/repo"
 )
 
 
