@@ -8,8 +8,9 @@ import (
 )
 
 type StorageConfig struct {
-	Env        string `yaml:"env" env-required:"true"`
-	GRPCServer `yaml:"grpc_server" env-required:"true"`
+	Env string 	`yaml:"env" env-required:"true"`
+	GRPCServer 	`yaml:"grpc_server" env-required:"true"`
+	Dsn string 	`yaml:"dsn" env-required:"true"`
 }
 
 type GRPCServer struct {
