@@ -21,6 +21,7 @@ message CreateStorageResponse{
 
 message AddCellRequest{
     string name = 1;
+    uint64 storage_id = 2;
 }
 
 message AddCellResponse{
@@ -30,6 +31,7 @@ message AddCellResponse{
 
 message AddBoxRequest{
     string name = 1;
+    uint64 cell_id = 2;
 }
 
 message AddBoxResponse{
