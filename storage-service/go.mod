@@ -1,4 +1,4 @@
-module github.com/LavaJover/storage-master/storage-service
+module github.com/LavaJover/storage-master
 
 go 1.23.2
 

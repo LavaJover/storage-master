@@ -3,7 +3,7 @@ package repo
 import (
 	"log/slog"
 
-	"github.com/LavaJover/storage-master/storage-service/internal/models"
+	"github.com/LavaJover/storage-master/internal/models"
 	"gorm.io/gorm"
 )
 

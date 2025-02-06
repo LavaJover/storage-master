@@ -3,9 +3,9 @@ package repo_test
 import (
 	"testing"
 
-	"github.com/LavaJover/storage-master/storage-service/internal/config"
-	"github.com/LavaJover/storage-master/storage-service/internal/db"
-	"github.com/LavaJover/storage-master/storage-service/internal/models"
+	"github.com/LavaJover/storage-master/internal/config"
+	"github.com/LavaJover/storage-master/internal/db"
+	"github.com/LavaJover/storage-master/internal/models"
 )
 
 func TestInsertBox(t *testing.T){

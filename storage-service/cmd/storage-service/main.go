@@ -6,12 +6,12 @@ import (
 	"log/slog"
 	"net"
 
-	"github.com/LavaJover/storage-master/storage-service/internal/config"
-	"github.com/LavaJover/storage-master/storage-service/internal/db"
-	"github.com/LavaJover/storage-master/storage-service/internal/repo"
-	"github.com/LavaJover/storage-master/storage-service/internal/server"
-	"github.com/LavaJover/storage-master/storage-service/internal/service"
-	storagepb "github.com/LavaJover/storage-master/storage-service/proto/gen"
+	"github.com/LavaJover/storage-master/internal/config"
+	"github.com/LavaJover/storage-master/internal/db"
+	"github.com/LavaJover/storage-master/internal/repo"
+	"github.com/LavaJover/storage-master/internal/server"
+	"github.com/LavaJover/storage-master/internal/service"
+	storagepb "github.com/LavaJover/storage-master/proto/gen"
 	"google.golang.org/grpc"
 )
 
