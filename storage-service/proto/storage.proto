@@ -17,11 +17,13 @@ service StorageService{
 // Storages
 message CreateStorageRequest{
     string name = 1;
+    uint64 user_id = 2;
 }
 
 message CreateStorageResponse{
     uint64 id = 1;
     string name = 2;
+    uint64 user_id = 3;
 }
 
 message GetStoragesRequest{
