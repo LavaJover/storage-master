@@ -8,8 +8,13 @@ service StorageService{
     rpc CreateStorage (CreateStorageRequest) returns (CreateStorageResponse);
     rpc AddCell (AddCellRequest) returns (AddCellResponse);
     rpc AddBox (AddBoxRequest) returns (AddBoxResponse);
+
+    rpc GetStorages (GetStoragesRequest) returns (GetStoragesResponse);
+    rpc GetCells (GetCellsRequest) returns (GetCellsResponse);
+    rpc GetBoxes (GetBoxesRequest) returns (GetBoxesResponse);
 }
 
+// Storages
 message CreateStorageRequest{
     string name = 1;
 }
@@ -19,6 +24,21 @@ message CreateStorageResponse{
     string name = 2;
 }
 
+message GetStoragesRequest{
+    uint64 user_id = 1;
+}
+
+message Storage{
+    uint64 id = 1;
+    string name = 2;
+    uint64 user_id = 3;
+}
+
+message GetStoragesResponse{
+    repeated Storage storages = 1;
+}
+
+//Cells
 message AddCellRequest{
     string name = 1;
     uint64 storage_id = 2;
@@ -30,6 +50,21 @@ message AddCellResponse{
     uint64 storage_id = 3;
 }
 
+message Cell{
+    uint64 id = 1;
+    string name = 2;
+    uint64 storage_id = 3;
+}
+
+message GetCellsRequest{
+    uint64 storage_id = 1;
+}
+
+message GetCellsResponse{
+    repeated Cell cells = 1;
+}
+
+// Boxes
 message AddBoxRequest{
     string name = 1;
     uint64 cell_id = 2;
@@ -39,4 +74,18 @@ message AddBoxResponse{
     uint64 id = 1;
     string name = 2;
     uint64 cell_id = 3;
+}
+
+message Box{
+    uint64 id = 1;
+    string name = 2;
+    uint64 cell_id = 3;
+}
+
+message GetBoxesRequest{
+    uint64 cell_id = 1;
+}
+
+message GetBoxesResponse{
+    repeated Box boxes = 1;
 }
