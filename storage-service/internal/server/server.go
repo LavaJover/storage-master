@@ -14,6 +14,7 @@ type StorageServer struct{
 	storagepb.UnimplementedStorageServiceServer
 }
 
+// Storage methods
 func (server *StorageServer) CreateStorage (ctx context.Context, r *storagepb.CreateStorageRequest) (*storagepb.CreateStorageResponse, error){
 	newStorage := &models.Storage{
 		Name: r.Name,
@@ -32,6 +33,11 @@ func (server *StorageServer) CreateStorage (ctx context.Context, r *storagepb.Cr
 	}, nil
 }
 
+func (server *StorageServer) GetStorages (ctx context.Context, r *storagepb.GetStoragesRequest) (*storagepb.GetStoragesResponse, error){
+
+}
+
+// Cell methods
 func (server *StorageServer) AddCell (ctx context.Context, r *storagepb.AddCellRequest) (*storagepb.AddCellResponse, error){
 	newCell := &models.Cell{
 		Name: r.Name,
@@ -50,6 +56,15 @@ func (server *StorageServer) AddCell (ctx context.Context, r *storagepb.AddCellR
 		Name: newCell.Name,
 		StorageId: uint64(newCell.StorageID),
 	}, nil
+}
+
+func (server *StorageServer) GetCells (ctx context.Context, r *storagepb.GetCellsRequest) (*storagepb.GetCellsResponse, error){
+
+}
+
+// Box methods
+func (server *StorageServer) GetBoxes (ctx context.Context, r *storagepb.GetBoxesRequest) (*storagepb.GetBoxesResponse, error){
+	
 }
 
 func (server *StorageServer) AddBox (ctx context.Context, r *storagepb.AddBoxRequest) (*storagepb.AddBoxResponse, error){
