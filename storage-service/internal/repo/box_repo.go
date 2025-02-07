@@ -23,3 +23,10 @@ func (boxRepo *BoxRepo) InsertBox (box *models.Box) error{
 	slog.Info("inserted new Box instance", "ID", box.ID)
 	return nil
 }
+
+// Get box instances from database by cell_id
+func (boxRepo *BoxRepo) GetBoxesByCellID (cellID uint64) ([]models.Box, error){
+	var boxes []models.Box
+	err := boxRepo.DB.Where("cell_id = ?", cellID).Find(&boxes).Error
+	return boxes, err
+}

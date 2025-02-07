@@ -23,3 +23,10 @@ func (storageRepo *StorageRepo) InsertStorage (storage *models.Storage) error {
 
 	return nil
 }
+
+// Get all storage instances by user_id
+func (storageRepo *StorageRepo) GetStoragesByUserID (userID uint64) ([]models.Storage, error) {
+	var storages []models.Storage
+	err := storageRepo.DB.Where("user_id = ?", userID).Preload("Cells.Boxes").Find(&storages).Error
+	return storages, err
+}
