@@ -22,3 +22,10 @@ func (cellRepo *CellRepo) InsertCell (cell *models.Cell) error{
 	slog.Info("inserted new Cell instance", "ID", cell.ID)
 	return nil
 }
+
+// Get all cell instances by storage_id
+func (cellRepo *CellRepo) GetCellsByStorageID (storageID uint64) ([]models.Cell, error){
+	var cells []models.Cell
+	err := cellRepo.DB.Where("storage_id = ?", storageID).Preload("Boxes").Find(&cells).Error
+	return cells, err
+}
