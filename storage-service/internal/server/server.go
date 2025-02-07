@@ -18,6 +18,7 @@ type StorageServer struct{
 func (server *StorageServer) CreateStorage (ctx context.Context, r *storagepb.CreateStorageRequest) (*storagepb.CreateStorageResponse, error){
 	newStorage := &models.Storage{
 		Name: r.Name,
+		UserID: r.UserId,
 	}
 
 	err := server.StorageService.CreateStorage(newStorage)
