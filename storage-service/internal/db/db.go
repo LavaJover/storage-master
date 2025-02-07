@@ -1,7 +1,7 @@
 package db
 
 import (
-	"github.com/LavaJover/storage-master/internal/models"
+	"github.com/LavaJover/storage-master/pkg/models"
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
 )

@@ -4,7 +4,7 @@ import (
 	"context"
 	"log/slog"
 
-	"github.com/LavaJover/storage-master/internal/models"
+	"github.com/LavaJover/storage-master/pkg/models"
 	"github.com/LavaJover/storage-master/internal/service"
 	storagepb "github.com/LavaJover/storage-master/proto/gen"
 )
