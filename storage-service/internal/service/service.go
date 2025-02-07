@@ -1,7 +1,7 @@
 package service
 
 import (
-	"github.com/LavaJover/storage-master/storage-service/internal/models"
+	"github.com/LavaJover/storage-master/storage-service/pkg/models"
 	"github.com/LavaJover/storage-master/storage-service/internal/repo"
 )
 
