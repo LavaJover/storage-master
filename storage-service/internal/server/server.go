@@ -31,6 +31,7 @@ func (server *StorageServer) CreateStorage (ctx context.Context, r *storagepb.Cr
 	return &storagepb.CreateStorageResponse{
 		Id: uint64(newStorage.ID),
 		Name: newStorage.Name,
+		UserId: newStorage.UserID,
 	}, nil
 }
 
