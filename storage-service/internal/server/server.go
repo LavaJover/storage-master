@@ -4,9 +4,9 @@ import (
 	"context"
 	"log/slog"
 
-	"github.com/LavaJover/storage-master/pkg/models"
-	"github.com/LavaJover/storage-master/internal/service"
-	storagepb "github.com/LavaJover/storage-master/proto/gen"
+	"github.com/LavaJover/storage-master/storage-service/pkg/models"
+	"github.com/LavaJover/storage-master/storage-service/internal/service"
+	storagepb "github.com/LavaJover/storage-master/storage-service/proto/gen"
 )
 
 type StorageServer struct{
